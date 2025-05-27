@@ -1,0 +1,107 @@
+h1 {
+    font-size: 40px;
+    color: brown;
+}
+
+body {
+    color: blue;
+}
+
+#container {
+    width: 950px;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inicio {
+    width: 350px;
+    height: 200px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+    color: black;
+}
+
+#fundoGame {
+    width: 950px;
+    height: 630px;
+    background-image: url(../img/fundo_game_beatemup_resized.png);
+    border-color: white;
+    border-style: solid;
+}
+
+#jogador {
+    position: absolute;
+    left: 500px;
+    top: 550px;
+}
+
+.animaJogador {
+    width: 40px;
+    height: 44px;
+    background-image: url(../img/sprite_beatemup_player_scaled.png);
+    animation: playJogador 1s steps(6) infinite;
+}
+
+@keyframes playJogador {
+    from{background-position: 0px;}
+    to{background-position: -270px;}
+}
+
+#disparo{
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    background-image: url(../img/disparo.png)
+}
+
+#inimigo1{
+    width: 80px;
+    height: 80px;
+    left: 900px;
+    top: 550px;
+    position: absolute;
+    background-image: url(../img/inimigo1.png);
+    animation: flutuarIni1 .5s ease-in-out infinite alternate;
+}
+
+@keyframes flutuarIni1 {
+    from{transform: translateY(-10px);}
+    to{transform: translateY(100px);}
+}
+
+
+#inimigo2{
+    width: 80px;
+    height: 80px;
+    left: 870px;
+    top: 550px;
+    position: absolute;
+    background-image: url(../img/inimigo2.png);
+    animation: flutuarIni2 1s ease-in-out infinite alternate;
+}
+
+@keyframes flutuarIni2 {
+    from{transform: translateY(5px);}
+    to{transform: translateY(-100px);}
+}
+
+#placar {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+
+}
+
+h2 {
+    font-size: 20px;
+    color: black;
+    background-color: white; 
+}
